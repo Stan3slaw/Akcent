@@ -1,0 +1,547 @@
+// *, *:before, *:after {
+//   padding: 0;
+//   margin: 0;
+//   border: 0;
+//   box-sizing: border-box;
+// }
+@import "null.scss";
+@import "fonts.scss";
+
+body {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #fff;
+  background-color: #020202;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.logo img {
+  max-width: 100%;
+  display: block;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 30px;
+  color: #ffff;
+}
+
+.sub-title {
+  font-weight: 300;
+  font-size: 20px;
+  color: #ffff;
+}
+
+
+/*-----------Header styles start-----------*/
+
+@import "header.scss";
+
+/*-----------Header styles end-----------*/
+
+/*-----------Main page styles start-----------*/
+
+.block1 {
+  height: 100vh;
+  max-width: 100%;
+
+  .main__banner {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: url('../img/ImgOnPages/block1.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+  }
+
+  .main__title{
+    text-align: center;
+    margin-top: 20%;
+  }
+}
+
+/*#################### general slider-catalogue styles start #################### */
+
+.slick-slider {
+  min-width: 0;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.block2 {
+  position: relative;
+}
+
+.slider__catalogue {
+  overflow: hidden;
+
+   .slick-arrow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 40%;
+    z-index: 10;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 50%;
+    outline: none;
+
+    &:hover {
+     background-color: #f05a3f;
+     opacity: 90%;
+   }
+
+    &.animated {
+     background-color: #f05a3f;
+   }
+
+    &::before {
+     content: '';
+     position: absolute;
+     width: 15px;
+     height: 4px;
+     background-color: #666;
+     transform: rotate(45deg);
+     top: 18.5px;
+     left: 18px;
+     border-radius: 0 25% 25% 0;
+     transition: all .3s ease;
+   }
+
+    &::after {
+     content: '';
+     position: absolute;
+     width: 15px;
+     height: 4px;
+     background-color: #666;
+     transform: rotate(-45deg);
+     bottom: 18.5px;
+     left: 18px;
+     border-radius: 0 25% 25% 0;
+     transition: all .3s ease;
+   }
+
+    &:hover::before,  &:hover::after {
+     background-color: #000;
+   }
+
+    &.animated::before,  &.animated::after {
+     background-color: #000;
+   }
+
+    &.slick-prev {
+     left: 25px;
+     transform: rotate(180deg);
+   }
+
+    &.slick-next {
+     right: 25px;
+   }
+
+    &.animated::before {
+     transform: rotate(25deg);
+     top: 20.5px;
+     left: 22px;
+   }
+
+    &.animated::after {
+     transform: rotate(-25deg);
+     bottom: 20.5px;
+     left: 22px;
+   }
+
+    &.slick-prev.animated {
+     left: 10px;
+   }
+
+    &.slick-next.animated {
+     right: 10px;
+   }
+
+   &.slick-disabled {
+     opacity: 0.2;
+   }
+ }
+  }
+
+.slider__screen__catalogue {
+  height: 100vh;
+  width: 100%;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+
+
+.slider__nav {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(26, 26, 26, 0.75);
+  padding: 0 20px 0;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+
+  .slider__menu {
+    display: flex;
+    align-items: center;
+    max-width: 1001px;
+    margin: 0 auto;
+    border-left: 1px solid #fff;
+
+    .slider__nav-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 0 1 200px;
+      height: 100px;
+      border-right: 1px solid #fff;
+      cursor: pointer;
+
+      .highlight {
+        position: absolute;
+        width: 100%;
+        height: 10px;
+        background-color: #ee6b47;
+        top: -10px;
+        left: 0;
+        cursor: default;
+        transition: all .3s ease;
+      }
+
+      & img {
+        width: 51px;
+        height: 51px;
+      }
+
+      & p {
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+    }
+   }
+  }
+ }
+
+
+@media (max-width: 700px) {
+  .slider__catalogue{
+
+  .slick-arrow {
+    width: 30px;
+    height: 30px;
+
+   &::before {
+    width: 8px;
+    height: 2px;
+    top: 11.5px;
+    left: 11px;
+  }
+
+   &::after {
+    width: 8px;
+    height: 2px;
+    bottom: 11.5px;
+    left: 11px;
+  }
+  &.slick-prev {
+   left: 12px;
+ }
+
+  &.slick-next {
+   right: 12px;
+ }
+
+  &.animated::before {
+    transform: rotate(25deg);
+    top: 12.5px;
+    left: 13px;
+  }
+
+   &.animated::after {
+    transform: rotate(-25deg);
+    bottom: 12.5px;
+    left: 13px;
+   }
+  }
+ }
+}
+
+@media (max-width: 500px) {
+  .slider__nav {
+    padding: 0 10px 0;
+
+  .slider__menu{
+
+  .slider__nav-item {
+    flex: 0 1 200px;
+    height: 70px;
+
+  .highlight {
+    height: 8px;
+    top: -8px;
+  }
+
+   & img {
+    width: 31px;
+    height: 31px;
+  }
+
+   & p {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    }
+   }
+  }
+ }
+}
+
+/*#################### general slider-catalogue styles end #################### */
+
+
+
+
+/*#################### slider-manufacturers styles start #################### */
+
+.slick-slider {
+  min-width: 0;
+}
+
+.slick-list {
+	overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.block3 {
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:  url('../img/ImgOnPages/block3.jpg') no-repeat center;
+}
+.partners {
+  margin: 0 0 80px 0;
+  font-size: 50px;
+  text-align: center;
+  top: 20px;
+}
+
+.slider__manufacturers {
+    position: relative;
+    padding: 0px 50px;
+   .slick-arrow {
+    position: absolute;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    top: 40%;
+    z-index: 10;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 50%;
+    outline: none;
+
+    &:hover {
+     background-color: #f05a3f;
+     opacity: 90%;
+   }
+
+    &.animated {
+     background-color: #f05a3f;
+   }
+
+    &::before {
+     content: '';
+     position: absolute;
+     width: 12px;
+     height: 3px;
+     background-color: #666;
+     transform: rotate(45deg);
+     top: 14.5px;
+     left: 14px;
+     border-radius: 0 25% 25% 0;
+     transition: all .3s ease;
+   }
+
+    &::after {
+     content: '';
+     position: absolute;
+     width: 12px;
+     height: 3px;
+     background-color: #666;
+     transform: rotate(-45deg);
+     bottom: 14.5px;
+     left: 14px;
+     border-radius: 0 25% 25% 0;
+     transition: all .3s ease;
+   }
+
+    &:hover::before,  &:hover::after {
+     background-color: #000;
+   }
+
+    &.animated::before,  &.animated::after {
+     background-color: #000;
+   }
+
+    &.slick-prev {
+     left: 14px;
+     transform: rotate(180deg);
+   }
+
+    &.slick-next {
+     right: 14px;
+   }
+
+    &.animated::before {
+     transform: rotate(25deg);
+     top: 16.25px;
+     left: 17.25px;
+   }
+
+    &.animated::after {
+     transform: rotate(-25deg);
+     bottom: 16.25px;
+     left: 17.25px;
+   }
+
+    &.slick-prev.animated {
+     left: 10px;
+   }
+
+    &.slick-next.animated {
+     right: 10px;
+   }
+
+   &.slick-disabled {
+     opacity: 0.2;
+   }
+ }
+
+  & .slick-dots {
+    display: flex;
+ 	  align-items: center;
+ 	  justify-content: center;
+ }
+
+  & .slick-dots li {
+   list-style: none;
+   margin: 0px 10px;
+ }
+
+  & .slick-dots button {
+   font-size: 0;
+   width: 10px;
+   height: 10px;
+   background-color: #fff;
+   border-radius: 50%;
+ }
+
+  & .slick-dots li.slick-active button {
+   background-color: transparent;
+   border: 1px solid #fff;
+ }
+
+}
+
+.slider__screen__manufacturers {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  height: 50vh;
+  background: rgba(207, 200, 200, 0.05);
+  & img {
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .partners{
+    font-size: 35px;
+  }
+  .slider__manufacturers{
+
+  .slick-arrow {
+    width: 30px;
+    height: 30px;
+
+   &::before {
+    width: 8px;
+    height: 2px;
+    top: 11.5px;
+    left: 11px;
+  }
+
+   &::after {
+    width: 8px;
+    height: 2px;
+    bottom: 11.5px;
+    left: 11px;
+  }
+  &.slick-prev {
+   left: 12px;
+ }
+
+  &.slick-next {
+   right: 12px;
+ }
+
+  &.animated::before {
+    top: 12.5px;
+    left: 13px;
+  }
+
+   &.animated::after {
+    bottom: 12.5px;
+    left: 13px;
+   }
+  }
+ }
+}
+/*#################### general slider-manufacturers styles end #################### */
+
+
+
+
+/*-----------Main page styles end-----------*/
+
+/*-----------footer start-----------*/
+
+@import "footer.scss";
+
+/*-----------footer end-----------*/
