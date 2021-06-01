@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Akcent</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT6g1SFRKyjMogql--rDZ9D7Wchj9VT9Y&callback=initMap&libraries=&v=weekly" defer></script>
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/map.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__body">
+          <a href="/" class="header__logo logo">
+            <img src="./img/svg/logo.svg" alt="Akcent">
+          </a>
+          <div class="header__burger">
+            <span></span>
+          </div>
+          <nav class="header__menu">
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="" class="header__link">Каталог</a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link">Акції</a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link">Контакти</a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link">Новини</a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link">Про нас</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="contacts__background"></div>
+
+      <section class="contacts">
+        <div class="container">
+          <h1 class="contacts__title title">
+            Контакти
+          </h1>
+
+          <div class="contacts__body">
+            <div class="contacts__row">
+              <div class="contacts__info">
+                <ul class="contacts__info-list">
+                  <li class="contacts__info-item">
+                    <p>Телефон:</p>
+                    <span>+38 (099) 765-11-36 <br> <span id="work__day">Пн-Сб: 9:00 - 18:00</span> </span>
+                  </li>
+                  <li class="contacts__info-item">
+                    <p>Адреса:</p>
+                    <span>ПП Курілін, Княгининок,<br> Волинська область, 45630</span>
+                  </li>
+                  <li class="contacts__info-item">
+                    <p>Email:</p>
+                    <span>akcent@gmail.com</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="contacts__forms">
+                <form>
+                  <div class="contacts__sub-title sub-title">Задайте нам питання</div>
+                  <ul class="contacts__forms-list">
+                    <li class="contacts__forms-item">
+                      <input type="text" id="name" placeholder="Ваше ім'я">
+                    </li>
+                    <li class="contacts__forms-item">
+                      <input type="email" id="email" placeholder="Ваш email">
+                    </li>
+                    <li class="contacts__forms-item">
+                      <textarea rows="6" id="message" placeholder="Ваше запитання"></textarea>
+                    </li>
+                    <li class="contacts__forms-item">
+                      <button type="submit">Відправити</button>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map">
+        <div class="container">
+          <h2 class="map__title title">Ми на карті</h2>
+          <div id="map"></div>
+        </div>
+        <div class="accordeon-container container">
+          <ul class="accordeon">
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="50.7398786" map-lng="25.2639653">Луцьк</div>
+              <ul class="accordeon__body">
+                <li><a href="#map" markerLatLng="50.719626, 25.313861">вул. Грабовського 7А</a></li>
+                <li><a href="#map" markerLatLng="50.744574, 25.303666">вул. Ковельська 45</a></li>
+                <li><a href="#map" markerLatLng="50.742948, 25.319406">вул. Сенаторки Левчанівської, 2</a></li>
+                <li><a href="#map" markerLatLng="50.719571, 25.306607">вул. Станіславського 52В</a></li>
+                <li><a href="#map" markerLatLng="50.7502517,25.3577504">вул. Чорновола,44</a></li>
+                <li><a href="#map" markerLatLng="50.7596906,25.3412712">вул.Арцеулова, 16</a></li>
+                <li><a href="#map" markerLatLng="50.7502946,25.3354382">вул.Шопена,13</a></li>
+                <li><a href="#map" markerLatLng="50.763073,25.3700609">пр.Молоді, 8/В, бар Барель</a></li>
+                <li><a href="#map" markerLatLng="50.7175798,25.3094129">б-р Дружби Народів, 2г</a></li>
+                <li><a href="#map" markerLatLng="50.7197373,25.3099855">б-р Дружби Народів, 6</a></li>
+                <li><a href="#map" markerLatLng="50.7758419,25.355089">вул. Гордіюк 2</a></li>
+                <li><a href="#map" markerLatLng="50.7691347,25.3659522">вул. Гордіюк 39</a></li>
+                <li><a href="#map" markerLatLng="50.729255,25.2942376">вул. Даньшина 2 </a></li>
+                <li><a href="#map" markerLatLng="50.7720475,25.3581271">вул. Конякіна, 7А</a></li>
+                <li><a href="#map" markerLatLng="50.7704103,25.3567258">вул. Конякіна, 9б</a></li>
+                <li><a href="#map" markerLatLng="50.7584432,25.3545826">вул.Кравчука 46Г</a></li>
+                <li><a href="#map" markerLatLng="50.7479739,25.4392755">вул.Рівненська,76</a></li>
+                <li><a href="#map" markerLatLng="50.7481175,25.4391923">вул.Рівненська,87</a></li>
+                <li><a href="#map" markerLatLng="50.750325,25.3267122">пр.Винниченка,47А</a></li>
+                <li><a href="#map" markerLatLng="50.7469446,25.3775819">пр.Відродження,8</a></li>
+                <li><a href="#map" markerLatLng="50.744219, 25.347905">пр.Волі, 43</a></li>
+                <li><a href="#map" markerLatLng="50.7550662,25.3335528">пр.Грушевського, 3</a></li>
+                <li><a href="#map" markerLatLng="50.7615048,25.364081">пр.Соборності, 15</a></li>
+                <li><a href="#map" markerLatLng="50.758941,25.359333">пр.Соборності, 32</a></li>
+                <li><a href="#map" markerLatLng="50.7647175,25.3670489">пр.Соборності, 9</a></li>
+
+              </ul>
+            </li>
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="50.6111177" map-lng="26.2095639">Рівне</div>
+              <ul class="accordeon__body">
+                <li><a href="#map" markerLatLng="50.6416093,26.2636752">вул. Волинської Дивізії 1</a></li>
+                <li><a href="#map" markerLatLng="50.611393,26.2562849">вул. О. Новака 66/14</a></li>
+                <li><a href="#map" markerLatLng="50.6267409,26.2384249">вул. Привокзальна,1Б</a></li>
+                <li><a href="#map" markerLatLng="50.6113226,26.2718181">вул. С.Бандери 60</a></li>
+
+              </ul>
+            </li>
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="50.8482214" map-lng="24.2870786">Володимир-Волинський</div>
+              <ul class="accordeon__body">
+                <li><a href="#map" markerLatLng="50.8549711,24.3205577">вул.Ковельська,108</a></li>
+                <li><a href="#map" markerLatLng="50.8506022,24.3190522">вул.Ковельська,44</a></li>
+                <li><a href="#map" markerLatLng="50.8423679,24.3222134">вул.Луцька, 43</a></li>
+
+              </ul>
+            </li>
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="51.3439998" map-lng="25.834605">Вараш</div>
+              <ul class="accordeon__body">
+                <li><a href="#map" markerLatLng="51.3399533,25.8519743">вул. Енергетиків 11</a></li>
+                <li><a href="#map" markerLatLng="51.3532677,25.8454913">м-н Вараш 43\16</a></li>
+                <li><a href="#map" markerLatLng="51.3435401,25.8500721">мікрорайон Будівельників 71\Б</a></li>
+                <li><a href="#map" markerLatLng="51.3464887,25.8486706">пр-т. Шевченка 14</a></li>
+
+              </ul>
+            </li>
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="51.219144" map-lng="24.6456658">Ковель</div>
+              <ul class="accordeon__body">
+                <li><a href="#map" markerLatLng="51.2127247,24.7021562">вул. Грушевського,1</a></li>
+                <li><a href="#map" markerLatLng="51.2178584,24.707855">б-р. Лесі Українки 11</a></li>
+                <li><a href="#map" markerLatLng="51.2053441,24.6631641">вул. Відродження 4</a></li>
+                <li><a href="#map" markerLatLng="51.2116734,24.7133554">вул. Незалежності, 80/3</a></li>
+                <li><a href="#map" markerLatLng="51.2155478,24.7054215">вул. Театральна, 8 кор. 3</a></li>
+
+              </ul>
+            </li>
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="50.7356572" map-lng="24.1378459">Нововолинськ</div>
+              <ul class="accordeon__body">
+                <li><a href="#map" markerLatLng="50.7247307,24.1589954">вул. Дружби, 6</a></li>
+                <li><a href="#map" markerLatLng="50.7356572,24.1378459">вул. Рилеєва, 60-Б</a></li>
+                <li><a href="#map" markerLatLng="50.7225302,24.1728845">пр-т. Перемоги 23</a></li>
+              </ul>
+            </li>
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="51.6199302" map-lng="24.9301267">Камінь-Каширський</div>
+              <ul class="accordeon__body">
+                <li><a href="#map" markerLatLng="51.5974138,24.9550067">вул.Ковельська,5/4</a></li>
+              </ul>
+            </li>
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="50.4987081" map-lng="24.7280142">Горохів</div>
+              <ul class="accordeon__body">
+                <li><a href="#map" markerLatLng="50.504085,24.7709154">вул.Луцька, 45</a></li>
+              </ul>
+            </li>
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="50.3861232" map-lng="24.1882248">Червоноград</div>
+              <ul class="accordeon__body">
+                <li><a href="#map" markerLatLng="50.3960186,24.2426975">вул. В.Стуса,20</a></li>
+              </ul>
+            </li>
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="50.8329328" map-lng="25.4263834">Ківерці</div>
+              <ul class="accordeon__body">
+                <li><a href="#map" markerLatLng="50.8435206,25.4463701">вул.Чкалова,61</a></li>
+              </ul>
+            </li>
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="51.3269655" map-lng="26.5627645">Сарни</div>
+              <ul class="accordeon__body">
+                <li><a href="#map" markerLatLng="51.3368511,26.6158165">вул.Белгородська,2</a></li>
+                <li><a href="#map" markerLatLng="51.3378548,26.6055322">вул.Соборна,1</a></li>
+              </ul>
+            </li>
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="50.450051" map-lng="30.522273">Малі населені пункти</div>
+              <ul class="accordeon__body">
+                <li><a href="#map" markerLatLng="50.8383827,24.27994">с.Заріччя, вул. Героїв Майдану,4</a></li>
+                <li><a href="#map" markerLatLng="50.6639977,24.2330365">смт. Благодатне, вул. Перемоги, 23</a></li>
+                <li><a href="#map" markerLatLng="51.0872552,24.5239901">смт. Турійськ, вул. Ковельська, 2</a></li>
+                <li><a href="#map" markerLatLng="51.490809,23.9184464">смт. Шацьк, вул. Степана Шковороди 29В</a></li>
+                <li><a href="#map" markerLatLng="50.6389879,24.3526275">смт.Іваничі вул.Валова ,1а</a></li>
+                <li><a href="#map" markerLatLng="51.6614468,24.5312487">смт.Ратне вул.Центральна 2/70</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+    </main>
+
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__body">
+          <a href="/" class="footer__logo logo">
+            <img src="./img/svg/logo.svg" alt="Akcent">
+          </a>
+          <nav class="footer__nav">
+            <ul class="footer__nav-list--links">
+              <li class="footer__nav-item--links">
+                <a href="" class="footer__nav-link">Головна</a>
+              </li>
+              <li class="footer__nav-item--links">
+                <a href="" class="footer__nav-link">Каталог</a>
+              </li>
+              <li class="footer__nav-item--links">
+                <a href="" class="footer__nav-link">Акції</a>
+              </li>
+              <li class="footer__nav-item--links">
+                <a href="" class="footer__nav-link">Контакти</a>
+              </li>
+              <li class="footer__nav-item--links">
+                <a href="" class="footer__nav-link">Новини</a>
+              </li>
+              <li class="footer__nav-item--links">
+                <a href="" class="footer__nav-link">Про нас</a>
+              </li>
+            </ul>
+            <ul class="footer__nav-list--social">
+              <li class="footer__nav-item--social">
+                <a href="https://www.facebook.com/akcent.market/?hc_ref=ARTnTe2VBK2sdqbEicqEexM8COl8nBJiNjwllyrMCNLUJTfGc_gGubSiVPED5Ud5xK0&fref=nf&__tn__=kC-R" target="_blank" class="footer__nav-link">
+                  <img src="./img/svg/icon_facebook.svg" alt="facebook">
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__trademark">
+            ©2020 мережа магазинів Akcent, всі права захищено
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Akcent</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT6g1SFRKyjMogql--rDZ9D7Wchj9VT9Y&callback=initMap&libraries=&v=weekly" defer></script>
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/map.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+      <header class="header">
+    <div class="container">
+      <div class="header__body">
+          <a href="/" class="header__logo logo">
+            <img src="./img/svg/logo.svg" alt="Akcent">
+          </a>
+          <div class="header__burger">
+            <span></span>
+          </div>
+          <nav class="header__menu">
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="" class="header__link">Каталог</a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link">Акції</a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link">Контакти</a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link">Новини</a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link">Про нас</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+    </div>
+  </header>
+
+    <main class="main">
+      <div class="contacts__background"></div>
+
+      <section class="contacts">
+        <div class="container">
+          <h1 class="contacts__title title">
+            Контакти
+          </h1>
+
+          <div class="contacts__body">
+            <div class="contacts__row">
+              <div class="contacts__info">
+                <ul class="contacts__info-list">
+                  <li class="contacts__info-item contacts__info-item_1">
+                    <p>Телефон:</p>
+                    <span>+38 (099) 765-11-36 <br> <span id="work__day">Пн-Сб: 9:00 - 18:00</span> </span>
+                  </li>
+                  <li class="contacts__info-item contacts__info-item_2">
+                    <p>Адреса:</p>
+                    <span>ПП Курілін, Княгининок,<br> Волинська область, 45630</span>
+                  </li>
+                  <li class="contacts__info-item contacts__info-item_3">
+                    <p>Email:</p>
+                    <span>akcent@gmail.com</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="contacts__forms">
+                <form>
+                  <div class="contacts__sub-title sub-title">Задайте нам питання</div>
+                  <ul class="contacts__forms-list">
+                    <li class="contacts__forms-item">
+                      <input type="text" id="name" placeholder="Ваше ім'я">
+                    </li>
+                    <li class="contacts__forms-item">
+                      <input type="email" id="email" placeholder="Ваш email">
+                    </li>
+                    <li class="contacts__forms-item">
+                      <textarea rows="6" id="message" placeholder="Ваше запитання"></textarea>
+                    </li>
+                    <li class="contacts__forms-item">
+                      <button type="submit">Відправити</button>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map">
+        <div class="container">
+          <h2 class="map__title title">Ми на карті</h2>
+          <div id="map"></div>
+        </div>
+        <div class="accordeon-container container">
+          <ul class="accordeon">
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="50.7398786" map-lng="25.2639653">Луцьк</div>
+              <ul class="accordeon__body">
+                <li><a href="">Вул. Ковельська, 45</a></li>
+                <li><a href="">Вул. Сенаторки Левчанівської, 2</a></li>
+                <li><a href="">Вул. Станіславського, 52В</a></li>
+                <li><a href="">Вул. Арцеулова, 16</a></li>
+                <li><a href="">Б-Р Дружби Народів, 6</a></li>
+                <li><a href="">Вул. Гордіюк, 2</a></li>
+                <li><a href="">Вул. Даньшина, 2</a></li>
+                <li><a href="">Вул. Конякіна, 7А</a></li>
+              </ul>
+            </li>
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="50.6111177" map-lng="26.2095639">Рівне</div>
+              <ul class="accordeon__body">
+                <li><a href="">Вул. Ковельська, 45</a></li>
+                <li><a href="">Вул. Сенаторки Левчанівської, 2</a></li>
+                <li><a href="">Вул. Станіславського, 52В</a></li>
+                <li><a href="">Вул. Арцеулова, 16</a></li>
+                <li><a href="">Б-Р Дружби Народів, 6</a></li>
+                <li><a href="">Вул. Гордіюк, 2</a></li>
+                <li><a href="">Вул. Даньшина, 2</a></li>
+                <li><a href="">Вул. Конякіна, 7А</a></li>
+              </ul>
+            </li>
+            <li class="accordeon__item">
+              <div class="accordeon__header" map-lat="50.450051" map-lng="30.522273">Київ</div>
+              <ul class="accordeon__body">
+                <li><a href="#" marker-lat="50.444011" marker-lng="30.493478">Вул. Ковельська, 45</a></li>
+                <li><a href="#" marker-lat="50.505095" marker-lng="30.489442">Вул. Сенаторки Левчанівської, 2</a></li>
+                <li><a href="#" marker-lat="50.432259" marker-lng="30.603154">Вул. Станіславського, 52В</a></li>
+                <li><a href="#" marker-lat="50.388674" marker-lng="30.495508">Вул. Арцеулова, 16</a></li>
+                <li><a href="#" marker-lat="50.456571" marker-lng="30.365145">Б-Р Дружби Народів, 6</a></li>
+                <li><a href="#" marker-lat="50.416029" marker-lng="30.459642">Вул. Гордіюк, 2</a></li>
+                <li><a href="#" marker-lat="50.467242" marker-lng="30.629648">Вул. Даньшина, 2</a></li>
+                <li><a href="#" marker-lat="50.440170" marker-lng="30.443179">Вул. Конякіна, 7А</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+    </main>
+
+
+      <footer class="footer">
+      <div class="container">
+        <div class="footer__body">
+          <a href="/" class="footer__logo logo">
+            <img src="./img/svg/logo.svg" alt="Akcent">
+          </a>
+          <nav class="footer__nav">
+            <ul class="footer__nav-list--links">
+              <li class="footer__nav-item--links">
+                <a href="" class="footer__nav-link">Головна</a>
+              </li>
+              <li class="footer__nav-item--links">
+                <a href="" class="footer__nav-link">Каталог</a>
+              </li>
+              <li class="footer__nav-item--links">
+                <a href="" class="footer__nav-link">Акції</a>
+              </li>
+              <li class="footer__nav-item--links">
+                <a href="" class="footer__nav-link">Контакти</a>
+              </li>
+              <li class="footer__nav-item--links">
+                <a href="" class="footer__nav-link">Новини</a>
+              </li>
+              <li class="footer__nav-item--links">
+                <a href="" class="footer__nav-link">Про нас</a>
+              </li>
+            </ul>
+            <ul class="footer__nav-list--social">
+              <li class="footer__nav-item--social">
+                <a href="" class="footer__nav-link">
+                  <img src="./img/svg/icon_facebook.svg" alt="facebook">
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__trademark">
+            ©2020 мережа магазинів Akcent, всі права захищено
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
